@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.game {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-bottom: 100px solid green;
+    background: #87CEEB;
+    overflow: hidden;
+}
+
+.mario img {
+    position: absolute;
+    width: 200px;
+    bottom: 0px;
+    z-index: 99;
+}
+
+.mario img.jogando.pulo {
+    animation: mario-pular 800ms ease-in-out;
+}
+
+.cano img {
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    right: -200px;
+}
+
+.cano img.jogando{
+    animation: cano-animacao 2s linear infinite;
+}
+
+.nuvens img {
+    position: absolute;
+    width: 300px;
+    top: 30px;
+    right: -200px;
+}
+
+.nuvens img.jogando{
+    animation: nuvens-animacao 10s linear infinite;
+}
+
+.buttons {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reiniciar{
+    display: none;
+}
+
+@keyframes mario-pular {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 250px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes cano-animacao {
+    from {
+        right: -200px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes nuvens-animacao {
+    from {
+        right: -200px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
