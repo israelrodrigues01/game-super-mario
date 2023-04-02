@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif, 'Arial';
 }
 
 body {
@@ -60,6 +61,12 @@ body {
 
 .reiniciar{
     display: none;
+}
+
+.pontuacao{
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
 
 @keyframes mario-pular {
